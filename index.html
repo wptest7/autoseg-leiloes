@@ -1,1 +1,161 @@
-<h1>Auto Seg Leilões</h1>
+export default function AutoSegLandingPage() {
+  return (
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* HERO */}
+      <section className="relative overflow-hidden px-6 py-10 bg-gradient-to-b from-black to-zinc-900">
+        <div className="max-w-md mx-auto text-center">
+          <div className="flex justify-center mb-4">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/741/741407.png"
+              alt="Auto Seg"
+              className="w-28 h-28 object-contain opacity-90"
+            />
+          </div>
+
+          <h1 className="text-5xl font-black tracking-wide text-white">
+            AUTO SEG
+          </h1>
+
+          <p className="text-yellow-500 tracking-[0.4em] mt-1 text-sm font-semibold">
+            LEILÕES PREMIUM
+          </p>
+
+          <div className="mt-10 space-y-5">
+            <h2 className="text-4xl font-black leading-tight">
+              OS MELHORES VEÍCULOS
+              <span className="text-yellow-500 block">EM UM CLIQUE.</span>
+            </h2>
+
+            <p className="text-zinc-300 text-lg leading-relaxed">
+              Baixe nosso aplicativo e tenha acesso aos melhores leilões de veículos com segurança, praticidade e confiança.
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <a
+              href="/app.apk"
+              className="flex items-center justify-center gap-4 bg-yellow-500 text-black rounded-3xl py-5 px-6 font-black text-2xl shadow-2xl active:scale-95 transition"
+            >
+              ⬇ BAIXAR APP
+            </a>
+
+            <p className="mt-3 text-zinc-400 text-sm">
+              Última versão disponível
+            </p>
+          </div>
+
+          <div className="mt-6">
+            <a
+              href="https://wa.me/5517982159410"
+              target="_blank"
+              className="inline-flex items-center justify-center w-full border border-green-500 text-green-400 rounded-2xl py-4 font-bold text-lg"
+            >
+              FALAR NO WHATSAPP
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* BENEFITS */}
+      <section className="px-5 py-8 bg-zinc-950">
+        <div className="max-w-md mx-auto grid gap-4">
+          {[
+            {
+              title: "LEILÕES DIÁRIOS",
+              text: "Novos veículos disponíveis todos os dias.",
+            },
+            {
+              title: "COMPRA SEGURA",
+              text: "Processos claros e transparentes.",
+            },
+            {
+              title: "RESERVA RÁPIDA",
+              text: "Reserve seu veículo de forma prática.",
+            },
+            {
+              title: "SUPORTE ESPECIALIZADO",
+              text: "Atendimento rápido via WhatsApp.",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-zinc-900 border border-zinc-800 rounded-3xl p-5"
+            >
+              <h3 className="text-yellow-500 font-black text-lg">
+                {item.title}
+              </h3>
+              <p className="text-zinc-300 mt-2 leading-relaxed">
+                {item.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* TUTORIAL */}
+      <section className="px-5 py-10 bg-black">
+        <div className="max-w-md mx-auto">
+          <h2 className="text-3xl font-black mb-8">
+            COMO <span className="text-yellow-500">INSTALAR O APP</span>
+          </h2>
+
+          <div className="space-y-5">
+            {[
+              { step: "1", title: "BAIXE O APP", text: "Clique no botão para baixar." },
+              { step: "2", title: "PERMITA INSTALAÇÃO", text: "Ative fontes desconhecidas." },
+              { step: "3", title: "INSTALE", text: "Abra o arquivo baixado." },
+              { step: "4", title: "PERMISSÕES", text: "Permita as solicitações." },
+              { step: "5", title: "ACESSIBILIDADE", text: "Ative no sistema." },
+              { step: "6", title: "CADASTRO", text: "Crie sua conta." },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-zinc-900 rounded-3xl border border-zinc-800 p-5"
+              >
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-yellow-500 text-black flex items-center justify-center font-black">
+                    {item.step}
+                  </div>
+                  <h3 className="text-lg font-black text-yellow-500">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-zinc-300">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SUPPORT */}
+      <section className="px-5 pb-10">
+        <div className="max-w-md mx-auto bg-zinc-900 rounded-3xl p-6 border border-zinc-800 text-center">
+          <h2 className="text-3xl font-black">
+            PRECISA DE <span className="text-yellow-500">AJUDA?</span>
+          </h2>
+
+          <p className="text-zinc-300 mt-3">
+            Fale com nosso suporte agora mesmo.
+          </p>
+
+          <div className="mt-5 text-3xl font-black text-yellow-500">
+            (17) 98215-9410
+          </div>
+
+          <a
+            href="https://wa.me/5517982159410"
+            target="_blank"
+            className="mt-6 inline-flex w-full items-center justify-center bg-green-500 rounded-2xl py-4 text-black font-black text-lg"
+          >
+            FALAR NO WHATSAPP
+          </a>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-zinc-900 py-6 text-center text-zinc-500 text-sm">
+        © 2026 Auto Seg Leilões. Todos os direitos reservados.
+      </footer>
+    </div>
+  );
+}
